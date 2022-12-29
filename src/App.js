@@ -17,7 +17,7 @@ const App = () => {
       .then(response => {
         setPersons(response.data)
       })
-  }, [])
+  }, [persons])
 
   const handleFindPerson = (e) => {
     setFindPerson(e.target.value)
