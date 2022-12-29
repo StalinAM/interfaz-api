@@ -47,11 +47,11 @@ const App = () => {
           setPersons(persons.concat(response.data));
           setNewName("");
           setNewNumber("");
+          setErrorMessage(`Added ${personObject.name}`);
         })
         .catch((error) => {
           setErrorMessage(error.response.data.error);
         });
-      setErrorMessage(`Added ${personObject.name}`);
       setTimeout(() => {
         setErrorMessage(null);
       }, 2000);
