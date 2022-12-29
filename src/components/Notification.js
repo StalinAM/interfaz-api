@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
 
 function Notification({ message }) {
-
-    if (message === null) {
-        return null
-    }
-    return (
-        <p className='error' style={message.includes("added") ? { color: "red" } : { color: 'green' }} >{message}</p>
-    )
+  if (message === null) {
+    return null;
+  }
+  return (
+    <p
+      className="error"
+      style={message.includes("Added") ? { color: "green" } : { color: "red" }}
+    >
+      {message}
+    </p>
+  );
 }
 
-export default Notification
+export default Notification;
